@@ -1,6 +1,6 @@
 import { useMutation, UseMutationOptions } from '@tanstack/react-query'
-import { login } from '../api/login'
-import { LoginInput } from '@/shared/graphql/graphql'
+import { login } from '../../api/login'
+import { LoginInput } from '@/shared/graphql'
 
 export const useLogin = (
 	options?: UseMutationOptions<any, Error, LoginInput, unknown>

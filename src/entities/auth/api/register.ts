@@ -1,8 +1,7 @@
 import { axiosMain } from '@/shared/axios'
 import { IResponse } from '@/shared/types/response'
-import { CreateUserInput } from '@/shared/graphql/graphql'
 import { registerSchema } from '../model/schemas/register'
-import { RegisterMutation } from '@/shared/types/graphql'
+import { CreateUserInput, RegisterMutation } from '@/shared/graphql'
 
 export const register = async (data: CreateUserInput) => {
 	const res = await axiosMain.post<IResponse<RegisterMutation>>('', {

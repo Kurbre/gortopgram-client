@@ -1,10 +1,9 @@
 'use client'
-import { AuthForm } from '@/entities/auth'
+import { LoginForm, RegisterForm } from '@/entities/auth'
 import { Container } from '@/shared/ui/container'
-import img from '../assets/images/img.png'
-import Image from 'next/image'
 import { useSearchParams } from 'next/navigation'
-import RegisterForm from '@/entities/auth/ui/RegisterForm'
+import Image from 'next/image'
+import img from '../assets/images/img.png'
 
 const Auth = () => {
 	const param = useSearchParams().get('auth')
@@ -19,7 +18,7 @@ const Auth = () => {
 				className='max-w-[520px] w-full h-auto hidden sm:block'
 				priority
 			/>
-			{param === 'register' ? <RegisterForm /> : <AuthForm />}
+			{param === 'register' ? <RegisterForm /> : <LoginForm />}
 		</Container>
 	)
 }

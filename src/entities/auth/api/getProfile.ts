@@ -1,8 +1,8 @@
 import { axiosMain } from '@/shared/axios'
 import { IResponse } from '@/shared/types/response'
-import { getProfileSchema } from '@/entities/auth/model/schemas/getProfile'
-import { GetProfileQuery } from '@/shared/types/graphql'
+import { getProfileSchema } from '../model/schemas/getProfile'
 import { RequestCookie } from 'next/dist/compiled/@edge-runtime/cookies'
+import { GetProfileQuery } from '@/shared/graphql'
 
 export const getProfile = async (isSSR?: boolean, cookie?: RequestCookie) => {
 	const res = await axiosMain.post<IResponse<GetProfileQuery>>(
