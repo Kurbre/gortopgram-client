@@ -1,3 +1,2 @@
-export { useLogin } from './hooks/useLogin'
-export { useRegister } from './hooks/useRegister'
-export { default as AuthForm } from './ui/LoginForm'
+export { default as RegisterForm } from './ui/RegisterForm'
+export { default as LoginForm } from './ui/LoginForm'

@@ -1,6 +1,6 @@
 import { useMutation, UseMutationOptions } from '@tanstack/react-query'
-import { CreateUserInput } from '@/shared/graphql/graphql'
-import { register } from '../api/register'
+import { register } from '../../api/register'
+import { CreateUserInput } from '@/shared/graphql'
 
 export const useRegister = (
 	options?: UseMutationOptions<any, Error, CreateUserInput, unknown>

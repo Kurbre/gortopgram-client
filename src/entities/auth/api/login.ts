@@ -1,7 +1,7 @@
 import { axiosMain } from '@/shared/axios'
-import { loginSchema } from '@/entities/auth/model/schemas/login'
+import { loginSchema } from '../model/schemas/login'
 import { IResponse } from '@/shared/types/response'
-import { LoginInput, LoginMutation } from '@/shared/graphql/graphql'
+import { LoginInput, LoginMutation } from '@/shared/graphql'
 
 export const login = async (data: LoginInput) => {
 	const res = await axiosMain.post<IResponse<LoginMutation>>('', {

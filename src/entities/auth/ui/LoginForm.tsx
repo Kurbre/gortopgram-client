@@ -2,13 +2,13 @@
 import { useForm } from 'react-hook-form'
 import { Input } from '@/shared/ui/input'
 import { Button } from '@/shared/ui/button'
-import { useLogin } from '@/entities/auth'
+import { useLogin } from '../lib/hooks/useLogin'
 import { toast } from 'react-toastify'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { formSchemaLogin, FormSchemaLogin } from '../model/formSchemaLogin'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useFocusFormInput } from '@/entities/auth/hooks/useFocusFormInput'
+import { useFocusFormInput } from '../lib/hooks/useFocusFormInput'
 
 const LoginForm = () => {
 	const router = useRouter()
